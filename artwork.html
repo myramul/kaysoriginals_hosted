@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Artwork</title>
+    <link rel="stylesheet" href="style/artwork.css">
+    <link rel="icon" type="image/x-icon" href="imgs/KaysOrigLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="imgs/KaysOrigLogo.png" alt="Kay's Originals Logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="artists.html">ARTISTS</a></li>
+                <li><a href="artwork.html">ARTWORK</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li class="dropdown">
+                    <a href="contact.html">INQUIRIES</a>
+                        <ul class ="dropdown-menu">
+                            <li><a href="for_artists.html">FOR ARTISTS</a></li>
+                            <li><a href="for_customers.html">FOR CUSTOMERS</a></li>
+                        </ul>
+                </li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = "head-container">
+        <h1>ARTWORK</h1>
+    <button class="search-icon">&#128269;</button>
+    <button class="filter-icon"><i class="fas fa-filter"></i></button>
+
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search for an artwork...">
+        <button id="search-button">&#128269;</button>
+    </div>
+
+    <div class="filter-box" id="filter-box">
+        <button class="close-btn" id="close-filter">&times;</button>
+        <h2 style="text-align: center;">Filters</h2>
+    
+        <div class="filter-section">
+            <h3>Price</h3>
+            <label><input type="radio" name="price" value="l1000"> &lt; $1000</label>
+            <label><input type="radio" name="price" value="1000-5000"> $1000 - $5000</label>
+            <label><input type="radio" name="price" value="5001-10000"> $5001 - $10000</label>
+            <label><input type="radio" name="price" value="g10000"> &gt; $10000</label>
+        </div>
+    
+        <div class="filter-section">
+            <h3>Medium</h3>
+            <div id="medium-filters"></div>
+        </div>
+    
+        <div class="filter-section">
+            <h3>Theme</h3>
+            <div id="theme-filters"></div>
+        </div>
+    
+        <button id="apply-filters">Apply Filters</button>
+        <button id="reset-filters">Reset Filters</button>
+    </div>
+    
+    </div>
+
+    <div id="artwork-container">
+    </div>
+    <div class="pagination">
+        <button id="prev" onclick="changePage(-1)" disabled> &larr;</button>
+        <button id="next" onclick="changePage(1)">&rarr;</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>111 GALLERY AVE, ART CITY, NY 11548 | MON-SAT 10AM - 6PM</p>
+            <p>INFO@KAYSORIGINALS.COM</p>
+        </div>
+    </footer>
+
+    <script src="../back/artwork.js"></script>
+</body>
+</html>

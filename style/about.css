@@ -1,0 +1,277 @@
+
+@font-face {
+    font-family: 'Funnel';
+    src: url('fonts/funnel.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Quantico';
+    src: url('fonts/Quantico-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Shrikhand';
+    src: url('fonts/Shrikhand-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Danfo';
+    src: url('fonts/Danfo-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Crayon';
+    src: url('fonts/ColoredCrayons-7wPR.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Blackcrayon';
+    src: url('fonts/BlackCrayon-KyWA.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Sheila';
+    src: url('fonts/SheilaCrayon-1vWg.ttf') format('truetype');
+}
+  
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../imgs/background@2x.png);
+    background-size: cover;
+    background-position: center;
+    cursor: url('../imgs/cursors/paint_brush.cur') 10 2, auto;
+    color: #25322E;
+    font-family: 'Shrikhand', Helvetica, sans-serif; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+h1{
+    font-size: 26px;
+    font-family: 'Funnel', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
+
+    color: #EAF2DB;
+    text-transform: uppercase;
+    border-radius: 30px;
+    background-color: #25322E;
+    padding: 12px 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 1%;
+    background: rgba(234, 242, 219, 0.59);
+    border-radius: 30px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    border: 1px solid rgba(234, 242, 219, 0.34);
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+    color: rgb(34, 34, 34);
+    font-size: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #232323; 
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #EAF2DB;
+    background-color: #25322E;
+    border-radius: 20px;
+    padding: 7px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Funnel', Arial, Helvetica, sans-serif;
+    cursor: url('../imgs/cursors/link_select.cur') 10 2, auto;
+}
+
+.contact-card {
+    font-family: 'Funnel', sans-serif;
+    width: 50%;
+    height: fit-content;
+    translate: -6px -6px;
+    background: #EAF2DB;
+    border: 3px solid #25322E;
+    box-shadow: 12px 12px 0 #25322E;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: auto;
+    border-radius: 7px;
+  }
+
+.contact-card:hover{
+  translate: -6px;
+}
+
+  .two-card-content h2 {
+    margin-top: 12px; 
+    margin-bottom: 0px; 
+    padding: 5px;
+    text-align: center;
+}
+
+.two-card-content p {
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+  padding: 2px 6px;
+  text-align: left;
+}
+
+
+
+.card {
+    font-family: 'Funnel', sans-serif;
+    width: 45%;
+    height: 55vh;
+    translate: -6px -6px;
+    background: #EAF2DB;
+    border: 3px solid #25322E;
+    box-shadow: 12px 12px 0 #25322E;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: auto;
+    border-radius: 7px;
+  }
+
+  .card img {
+    display: block; 
+    border-radius: 5px;
+    width: 50%;
+    margin: auto; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 0 #25322E;
+}
+
+  .head {
+    font-family: 'Quantico', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    width: 100%;
+    height: 32px;
+    background: #ffffff;
+    padding: 5px 12px;
+    color: #25322E;
+    border-bottom: 3px solid #25322E;
+    text-align: center;
+  }
+  
+  .content {
+    padding: 8px 12px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .two-card-content {
+    padding: 5px 5px;
+    font-size: 17px;
+    font-weight: 200;
+    width: 70%;
+    margin: auto;
+  }
+
+
+  .card:hover {
+    translate: -6px;
+  }
+  
+  footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #25322E;
+    color: #EAF2DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-content p:hover {
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+}
+
+.dropdown-menu li {
+  padding-top: 7px;
+  display: block;
+  width: 100%;
+}
+
+.about-container {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 15px;
+}
+
+#map {
+  cursor: url('../imgs/cursors/link_select.cur') 10 2, auto;
+  padding: 0px;
+  width: 45%;
+  height: 55vh;
+}
